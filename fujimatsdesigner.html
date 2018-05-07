@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    div {
+        /*outline: 1px solid black;*/
+    }
+</style>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="js/fujimatsdesigner.js"></script>
+</head>
+<body onload="ready();">
+    <div class="sidebar">
+        <div class="brand">
+            <a href="http://fujimats.com">
+                <img src="images/fujimatslogo.png">
+            </a>
+        </div>
+        <div class="toolbox">
+            <div class="container">
+                <div class="button button-3" id="draw-tool">
+                    <div class="button-icon draw-tool"></div>
+                    <span class="button-label">Draw Room</span>
+                </div>
+                <div class="button button-3" id="matt-tool">
+                    <div class="button-icon matt-tool"></div>
+                    <span class="button-label">Place Matts</span>
+                </div>
+            </div>
+            <div class="container">
+                <div class="custom-select closed">
+                    <div class="custom-selected">
+                        <div class="custom-select-option custom-select-placeholder">Select Texture</div>
+                    </div>
+                    <div class="custom-select-options">
+                        <div class="custom-select-option">Smooth</div>
+                        <div class="custom-select-option">Tatami</div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="custom-select closed">
+                    <div class="custom-selected">
+                        <div class="custom-select-option custom-select-placeholder">Select Color</div>
+                    </div>
+                    <div class="custom-select-options">
+                        <div class="custom-select-option"><div class="color-box"></div>Red</div>
+                        <div class="custom-select-option"><div class="color-box"></div>Blue</div>
+                        <div class="custom-select-option"><div class="color-box"></div>Gray</div>
+                        <div class="custom-select-option"><div class="color-box"></div>Black</div>
+                        <div class="custom-select-option"><div class="color-box"></div>Apple</div>
+                        <div class="custom-select-option"><div class="color-box"></div>Green</div>
+                        <div class="custom-select-option"><div class="color-box"></div>Brown</div>
+                        <div class="custom-select-option"><div class="color-box"></div>Orange</div>
+                        <div class="custom-select-option"><div class="color-box"></div>Yellow</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class="button button-2" id="save-tool">
+                    <div class="button-icon save-tool"></div>
+                    <span class="button-label">Save</span>
+                </div>
+                <div class="button button-danger button-2" id="clear-tool">
+                    <div class="button-icon clear-tool"></div>
+                    <span class="button-label">Clear</span>
+                </div>
+                <div class="button button-2" id="submit-tool">
+                    <div class="button-icon submit-tool"></div>
+                    <span class="button-label">Submit</span>
+                </div>
+            </div>
+            <div class="container">
+                <span class="faint">&copy; 2018 - FujiMats</span>
+                <a href="#">Report a problem</a>
+            </div>
+        </div>
+    </div>
+    <div class="workzone">
+        <canvas id="paper" width="600" height="600">
+            Your browser does not support the HTML5 canvas tag.
+        </canvas>
+        <div class="settings">
+            Settings
+        </div>
+    </div>
+</body>
+</html>

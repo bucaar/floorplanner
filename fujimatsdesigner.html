@@ -2,14 +2,17 @@
 <html>
 <head>
 <style>
-    div {
-        /*outline: 1px solid black;*/
+    canvas {
+        outline: 1px solid black;
     }
 </style>
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="js/definitions.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/workarea.js"></script>
 <script src="js/fujimatsdesigner.js"></script>
 </head>
-<body onload="ready();">
+<body onload="documentReady();">
     <div class="sidebar">
         <div class="brand">
             <a href="http://fujimats.com">
@@ -28,31 +31,32 @@
                 </div>
             </div>
             <div class="container">
-                <div class="custom-select closed">
+                <div id="textureSelector" class="custom-select closed">
                     <div class="custom-selected">
                         <div class="custom-select-option custom-select-placeholder">Select Texture</div>
                     </div>
                     <div class="custom-select-options">
-                        <div class="custom-select-option">Smooth</div>
-                        <div class="custom-select-option">Tatami</div>
+                        <div class="custom-select-option" texturename="smooth-texture">Smooth</div>
+                        <div class="custom-select-option" texturename="tatami-texture">Tatami</div>
                     </div>
                 </div>
             </div>
             <div class="container">
-                <div class="custom-select closed">
+                <div id="colorSelector" class="custom-select closed hidden">
                     <div class="custom-selected">
                         <div class="custom-select-option custom-select-placeholder">Select Color</div>
                     </div>
                     <div class="custom-select-options">
-                        <div class="custom-select-option"><div class="color-box"></div>Red</div>
-                        <div class="custom-select-option"><div class="color-box"></div>Blue</div>
-                        <div class="custom-select-option"><div class="color-box"></div>Gray</div>
-                        <div class="custom-select-option"><div class="color-box"></div>Black</div>
-                        <div class="custom-select-option"><div class="color-box"></div>Apple</div>
-                        <div class="custom-select-option"><div class="color-box"></div>Green</div>
-                        <div class="custom-select-option"><div class="color-box"></div>Brown</div>
-                        <div class="custom-select-option"><div class="color-box"></div>Orange</div>
-                        <div class="custom-select-option"><div class="color-box"></div>Yellow</div>
+                        <div class="custom-select-option hidden smooth-texture tatami-texture"><div class="color-box"></div>Red</div>
+                        <div class="custom-select-option hidden smooth-texture tatami-texture"><div class="color-box"></div>Blue</div>
+                        <div class="custom-select-option hidden smooth-texture tatami-texture"><div class="color-box"></div>Gray</div>
+                        <div class="custom-select-option hidden smooth-texture tatami-texture"><div class="color-box"></div>Black</div>
+                        <div class="custom-select-option hidden tatami-texture"><div class="color-box"></div>Apple</div>
+                        <div class="custom-select-option hidden tatami-texture"><div class="color-box"></div>Green</div>
+                        <div class="custom-select-option hidden tatami-texture"><div class="color-box"></div>Brown</div>
+                        <div class="custom-select-option hidden tatami-texture"><div class="color-box"></div>Orange</div>
+                        <div class="custom-select-option hidden tatami-texture"><div class="color-box"></div>Yellow</div>
+                    </div>
                 </div>
             </div>
         </div>

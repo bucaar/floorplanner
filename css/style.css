@@ -111,6 +111,12 @@ a, a:visited, a:active {
 a {
     text-decoration: none;
 }
+canvas {
+    cursor: crosshair;
+}
+.hidden {
+    display: none;
+}
 
 .color-box {
     display: inline-block;
